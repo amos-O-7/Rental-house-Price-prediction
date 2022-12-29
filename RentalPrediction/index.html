@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Rental Price Predictor</title>
+  </head>
+  <body>
+    <h1>Rental Price Predictor</h1>
+    <form method="post" action="/predict">
+      <label for="Type of house">Type of house:</label><br>
+      <input type="text" id="Type of house" name="Type of house"><br>
+      <label for="Area of Location">Area of Location:</label><br>
+      <input type="text" id="Area of Location" name="Area of Location"><br>
+      <label for="Pet">Pet:</label><br>
+      <input type="text" id="Pet" name="Pet"><br>
+      <label for="Balcony">Balcony:</label><br>
+      <input type="text" id="Balcony" name="Balcony"><br>
+      <label for="Wifi">Wifi:</label><br>
+      <input type="text" id="Wifi" name="Wifi"><br>
+      <label for="Water">Water:</label><br>
+      <input type="text" id="Water" name="Water"><br>
+      <label for="Parking">Parking:</label><br>
+      <input type="text" id="Parking" name="Parking"><br><br>
+      <input type="submit" value="Predict">
+    </form> 
+    {% if prediction %}
+      <h2>Predicted Rental Price: {{ prediction }}</h2>
+    {% endif %}
+  </body>
+</html>
